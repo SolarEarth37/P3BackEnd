@@ -17,81 +17,96 @@ namespace loanSystem
 			deviceName = Id;
 			deviceNumber = DeviceNumber;
 			deviceName = Name;
-			deviceStatus = Status; 
-
-
+			deviceStatus = Status;
 		}
 
-    static void main(string[] args)
-    {
-        public 
-        
-        
-    }
+using System;
+using System.Collections.Generic;
 
-interface IWorkflow
-{
-    void Execute();
-}
-
-class VideoUploader : IWorkflow
-{
-    public void Execute()
+namespace loanSystem
     {
-        Console.WriteLine("Uploading a video!");
-    }
-}
-
-class CallWebService : IWorkflow
-{
-    public void Execute()
-    {
-        Console.WriteLine("Calling web service....");
-    }
-
-}
-class SendEmail : IWorkflow
-{
-    public void Execute()
-    {
-        Console.WriteLine("Send an email...");
-    }
-}
-class ChangeStaus : IWorkflow
-{
-    public void Execute()
-    {
-        Console.WriteLine("Statue changed...");
-    }
-}
-class WorkFlowEngine
-{
-    private List<IWorkflow> T;
-
-    public WorkFlowEngine()
-    {
-        T = new List<IWorkflow>();
-    }
-    public void AddWorkFlowObject(IWorkflow iObject)
-    {
-        T.Add(iObject);
-    }
-    public void RemoveWorkFlowObject(IWorkflow iObject)
-    {
-        T.Remove(iObject);
-    }
-
-    public void Run()
-    {
-        foreach (IWorkflow I in T)
+        //Definerar klassen Book
+        class Id
         {
-            I.Execute();
+            public enum Status
+            { get; set; }
+            public string Name
+            { get; set; }
+            public double Devicename
+            { get; set; }
+
         }
-    }
-}
-}
+        class Program
+        {
+            static List<Id> IdList = new List<Id>();
+            static Id Id = new Id();
+
+
+            //Menyn och startsidan till programmet
+            static void Main(string[] args)
+            {
+                //husk at rette den
+                using (StreamReader readFile = new StreamReader("Bookfil.txt"))
+                {
+                    string s;
+                    while ((s = readFile.ReadLine()) != null)
+                    {
+                        Id Id = new Id();
+                        string[] IdData = s.Split(',');
+                        Id.Author = IdData[0];
+                        Id.Title = IdData[1];
+                        IdList.Add(Id);
+                    }
+                    readFile.Close();
+                }
+                bool Close = true;
+                while (Close)
+                {
+                    Console.WriteLine("\n\nVelkomme til lånsystemmet !\n" +
+                    "\n1)Add a device \n" +
+                    "2)Delete a device \n" +
+                    "3)Search for a device \n" +
+                    "4)Borrow device\n" +
+                    "5)Return device\n" +
+                    "6)Close program\n\n");
+
+                    int val = int.Parse(Console.ReadLine());
+
+                    if (val == 1)
+                    {
+                        AddBook();
+                    }
+                    else if (val == 2)
+                    {
+                        RemoveBook();
+                    }
+                    else if (val == 3)
+                    {
+                        SearchBook();
+                    }
+                    else if (val == 4)
+                    {
+                        BorrowBook();
+                    }
+                    else if (val == 5)
+                    {
+                        ReturnBook();
+                    }
+                    else if (val == 6)
+                    {
+                        Console.WriteLine("Thanks!");
+                        Close = false;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid option\nTry igen! ");
+                    }
+                }
 
 
 
-}
-}
+
+            }
+
+        }
