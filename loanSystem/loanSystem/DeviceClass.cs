@@ -1,5 +1,6 @@
 ﻿using System;
 namespace loanSystem
+using System.Collections.Generic;
 {
     public class DeviceClass
     {
@@ -20,8 +21,7 @@ namespace loanSystem
 			deviceStatus = Status;
 		}
 
-using System;
-using System.Collections.Generic;
+
 
 namespace loanSystem
     {
@@ -74,23 +74,23 @@ namespace loanSystem
 
                     if (val == 1)
                     {
-                        AddBook();
+                        AddDevice();
                     }
                     else if (val == 2)
                     {
-                        RemoveBook();
+                        RemoveDevice();
                     }
                     else if (val == 3)
                     {
-                        SearchBook();
+                        SearchDevice();
                     }
                     else if (val == 4)
                     {
-                        BorrowBook();
+                        BorrowDevice();
                     }
                     else if (val == 5)
                     {
-                        ReturnBook();
+                        ReturnDevice();
                     }
                     else if (val == 6)
                     {
