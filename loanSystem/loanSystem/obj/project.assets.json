@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net6.0-windows7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net6.0-windows7.0": []
   },
   "packageFolders": {
     "C:\\Users\\omar-\\.nuget\\packages\\": {}
@@ -13,26 +13,26 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omar-\\Desktop\\C#\\P3\\loanSystem\\loanSystem\\loanSystem.csproj",
+      "projectUniqueName": "C:\\Users\\omar-\\Desktop\\C#\\P3\\P3BackEnd\\loanSystem\\loanSystem\\loanSystem.csproj",
       "projectName": "loanSystem",
-      "projectPath": "C:\\Users\\omar-\\Desktop\\C#\\P3\\loanSystem\\loanSystem\\loanSystem.csproj",
+      "projectPath": "C:\\Users\\omar-\\Desktop\\C#\\P3\\P3BackEnd\\loanSystem\\loanSystem\\loanSystem.csproj",
       "packagesPath": "C:\\Users\\omar-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omar-\\Desktop\\C#\\P3\\loanSystem\\loanSystem\\obj\\",
+      "outputPath": "C:\\Users\\omar-\\Desktop\\C#\\P3\\P3BackEnd\\loanSystem\\loanSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\omar-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -43,8 +43,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "imports": [
           "net461",
           "net462",
@@ -56,6 +56,11 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }

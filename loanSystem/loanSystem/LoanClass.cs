@@ -1,33 +1,20 @@
 ﻿using System;
 namespace loanSystem
 {
-	public class IDClass
+	public class LoanClass
 	{
-		public IDClass()
+		public int Id;
+		public DateOnly LoanDate;
+		public DateOnly DueDate;
+		public string Description;
+
+		public LoanClass(int id, DateOnly loanDate, DateOnly dueDate, string description)
 		{
+			Id = id;
+			LoanDate = loanDate;
+			DueDate = dueDate;
+			Description = description;
 		}
 	}
-}
-
-public static void Borrow.Device()
-{
-    Console.Write("Enter a device name or a device number: ");
-    string borrow = Console.ReadLine();
-    foreach (Device b in DviceList)
-    {
-        if (b.DeviceNumber.Equals(borrow))
-        {
-            if (b.IsBorrowed == true)
-            {
-                Console.WriteLine("Device is already taken");
-            }
-            else
-            {
-                Console.WriteLine(b.DeviceName + ":" + b.DeviceNumber);
-                b.IsBorrowed = true;
-            }
-        }
-
-    }
 }
         

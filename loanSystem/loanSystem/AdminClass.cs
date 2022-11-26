@@ -1,31 +1,38 @@
 ﻿using System;
+using static loanSystem.AdminClass;
+
 namespace loanSystem
 {
 	public class AdminClass
 	{
-		public string name;
-		public string phoneNumber;
-		public string eMail;
+		public string Name;
+		public string PhoneNumber;
+		public string Email;
+		public role Role;
 		public enum role
         {
-            Editor,
-            Viewer
+            Admin,
+            User,
+			Employee
         }
 
-        public AdminClass(string name, string phoneNumber, string eMail, enum role)
+        public AdminClass(string name, string phoneNumber, string email, role role)
 		{
-			adminName = name;
-			number = phoneNumber;
-			eMail = e-mail;
-			role = AdminRoles; 
+			Name = name;
+            PhoneNumber = phoneNumber;
+			Email = email;
+			this.Role = role; 
 
 
 		}
 
+		
 	//funtion
 
 
 
 	}
+
+  
 }
 
