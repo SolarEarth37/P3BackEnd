@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace loanSystem
 {
-    public class EmployeeClass : AdminClass
+    public class User : Employee 
     {
-        public EmployeeClass(string name, string phoneNumber, string email, role role) : base(name, phoneNumber, email, role)
+        public User(string name, string phoneNumber, string email) : base(name, phoneNumber, email)
         {
-
         }
     }
 }
