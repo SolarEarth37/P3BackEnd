@@ -3,7 +3,7 @@ namespace loanSystem
 {
     class Program
     {
-        static void Main (string[] args)
+        public static void Main (string[] args)
         {
             
             // create a new List of users
@@ -36,6 +36,13 @@ namespace loanSystem
             Console.WriteLine(deviceLender.LoanPackagesList[0].Packages[0].Devices[0].Name);
             Console.WriteLine(deviceLender.LoanPackagesList[0].Packages[0].Devices[1].Name);
             
+
         }
     }
+        public User GetUserFromName(string name) {
+            foreach(User p in userList) {
+                if (p.Name == name) return p;
+            }
+            return new User(name, "00000000", "default@email.dk");
+        }
 }
