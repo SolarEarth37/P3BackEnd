@@ -3,9 +3,27 @@ namespace loanSystem
 {
     class Program
     {
+        private static bool _keepRunning = true;
+
         public static void Main (string[] args)
         {
             
+            Console.CancelKeyPress += delegate(object sender, ConsoleCancelEventArgs e)
+            {
+                e.Cancel = true;
+                Program._keepRunning = false;
+            };
+
+            Console.WriteLine("Starting HTTP listener...");
+
+            var httpServer = new HttpServer();
+            httpServer.Start();
+
+            while (Program._keepRunning) { }
+
+            httpServer.Stop();
+
+            Console.WriteLine("Exiting gracefully...");
             // create a new List of users
 
             List<User> userList = new List<User>();
@@ -39,10 +57,5 @@ namespace loanSystem
 
         }
     }
-        public User GetUserFromName(string name) {
-            foreach(User p in userList) {
-                if (p.Name == name) return p;
-            }
-            return new User(name, "00000000", "default@email.dk");
-        }
+    
 }

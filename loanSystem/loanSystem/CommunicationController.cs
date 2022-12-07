@@ -10,7 +10,7 @@ namespace loanSystem
 
         [HttpPost("add/{user}")]
         public async Task<IActionResult> AddDevice(string user) {
-            return await new Loan(DateTime.Today, DateTime.Today, Program.Main.);
+            return await new Loan(DateTime.Today, DateTime.Today, ));
 
         }
     }
