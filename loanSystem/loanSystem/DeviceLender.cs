@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace loanSystem
 {
@@ -6,14 +7,16 @@ namespace loanSystem
     {
         private List<LoanDevice> _loanDevicesList = new List<LoanDevice>();
         private List<LoanPackage> _loanPackagesList = new List<LoanPackage>();
-
-        public void LendDevice(Device deviceToLend, User lender)
+ 
+        public void LendDevice(Device deviceToLend, User lender, DateOnly lendingDate)
         {
             List<Device> p = new List<Device> { deviceToLend };
-
-            LoanDevice l = new LoanDevice(DateOnly.MaxValue, DateOnly.MinValue, lender, p);
+            DateOnly dueDate = lendingDate.AddDays(5);
+            LoanDevice l = new LoanDevice(lendingDate, dueDate, lender, p);
 
             _loanDevicesList.Add(l);
+
+
         }
 
         public void LendPackage(Package packageToLend, User lender)
