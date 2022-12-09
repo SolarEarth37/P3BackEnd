@@ -15,19 +15,20 @@ namespace loanSystem
             };
 
             Console.WriteLine("Starting HTTP listener...");
+            List<User> userList = new List<User>();
+            DeviceLender deviceLender = new DeviceLender();
 
-            var httpServer = new HttpServer();
+            var httpServer = new HttpServer(userList, deviceLender);
             httpServer.Start();
 
             while (Program._keepRunning) { }
 
             httpServer.Stop();
 
+            /*
             Console.WriteLine("Exiting gracefully...");
             // create a new List of users
 
-            List<User> userList = new List<User>();
-            DeviceLender deviceLender = new DeviceLender();
             User user = new User("lol hansen", "123243435", "sdsd@sdsd.adsd");
             Admin peter = new Admin("Peter", "42424242", "p@corp.dk");
             Device mac = new Device(1, 456738, "iMac");
@@ -62,7 +63,7 @@ namespace loanSystem
             Console.WriteLine(deviceLender.LoanPackagesList[0].Packages[0].Devices[0].Name);
             Console.WriteLine(deviceLender.LoanPackagesList[0].Packages[0].Devices[1].Name);
 
-            
+            */
 
         }
     }
