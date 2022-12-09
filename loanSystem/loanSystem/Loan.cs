@@ -2,8 +2,8 @@ namespace loanSystem;
 
 public class Loan
 {
-    private DateOnly _lendingDate;
-    private DateOnly _dueDate;
+    public DateOnly _lendingDate;
+    public DateOnly _dueDate;
     private User _lender;
 
     public Loan(DateOnly lendingDate, DateOnly dueDate, User lender)
