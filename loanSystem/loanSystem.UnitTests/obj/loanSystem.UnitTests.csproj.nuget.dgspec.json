@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/massirqauomi/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj": {}
+    "/Users/massirq/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/massirqauomi/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj": {
+    "/Users/massirq/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/massirqauomi/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj",
+        "projectUniqueName": "/Users/massirq/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj",
         "projectName": "loanSystem.UnitTests",
-        "projectPath": "/Users/massirqauomi/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj",
-        "packagesPath": "/Users/massirqauomi/.nuget/packages/",
-        "outputPath": "/Users/massirqauomi/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/obj/",
+        "projectPath": "/Users/massirq/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/loanSystem.UnitTests.csproj",
+        "packagesPath": "/Users/massirq/.nuget/packages/",
+        "outputPath": "/Users/massirq/Documents/P3BackEnd/loanSystem/loanSystem.UnitTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/massirqauomi/.nuget/NuGet/NuGet.Config"
+          "/Users/massirq/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
